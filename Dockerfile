@@ -1,11 +1,8 @@
-# Use the official httpd (Apache) image as a base image
-FROM httpd:2.4
+# pull the htppd docker image from docker hub
+FROM httpd:latest
 
-# Set the working directory to the Apache document root
-WORKDIR /usr/local/apache2/htdocs
+# person who is maintinag the docker file
+MAINTAINER "vnom1985@gmail.com"
 
-# Copy all files from the current directory to the working directory
-COPY . .
-
-# Expose port 80 (the default port for Apache)
-EXPOSE 80
+# copying the the cakeshop application files from the source directory to destincation HTTPD Container directory
+COPY ./jewelshop/ /usr/local/apache2/htdocs/
