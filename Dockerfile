@@ -5,4 +5,4 @@ FROM httpd:latest
 MAINTAINER "manju@gmail.com"
 
 # copying the the jewshop application files from the source directory to destincation HTTPD Container directory
-COPY ./jewlshop/ /usr/local/apache2/htdocs/
+COPY . /usr/local/apache2/htdocs/
