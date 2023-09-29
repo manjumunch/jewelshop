@@ -2,7 +2,7 @@
 FROM httpd:latest
 
 # person who is maintinag the docker file
-MAINTAINER "vnom1985@gmail.com"
+MAINTAINER "manju@gmail.com"
 
 # copying the the cakeshop application files from the source directory to destincation HTTPD Container directory
 COPY ./jewelshop/ /usr/local/apache2/htdocs/
