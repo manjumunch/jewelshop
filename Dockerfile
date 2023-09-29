@@ -1,8 +1,11 @@
-# pull the htppd docker image from docker hub
-FROM httpd:latest
+# Use the official httpd (Apache) image as a base image
+FROM httpd:2.4
 
-# person who is maintinag the docker file
-MAINTAINER "manju@gmail.com"
+# Set the working directory to the Apache document root
+WORKDIR /usr/local/apache2/htdocs
 
-# copying the the jewshop application files from the source directory to destincation HTTPD Container directory
-COPY . /usr/local/apache2/htdocs/
+# Copy all files from the current directory to the working directory
+COPY . .
+
+# Expose port 80 (the default port for Apache)
+EXPOSE 80
