@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy to httpd server') {
             steps {
                 echo 'coping the file '
-                 sh 'scp -i /home/ec2-user/key.pem -r /var/jenkins/workspace/goldshop/* ec2-user@13.126.164.246:/var/www/html'
+                 sh 'scp -i /home/ec2-user/key.pem -r /var/jenkins/workspace/goldshop/* ec2-user@13.233.113.143:/var/www/html'
                 
             }
         }
